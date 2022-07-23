@@ -38,9 +38,10 @@ if(isset($_GET['code'])){
     <?php include_once('../shared/header.php'); ?>
 
     <div id="register">
-        <h1>REGISTER</h1>
+        <!-- <h1>REGISTER</h1> -->
+        <img src="../images/reg.png" class="regtitle">
         <form method="post" action="../function/mem_addmem_ok.php" class="mem-addmem-area">
-            <p>建立您的影視優帳號</p>
+            <p>建立您的賺載帳號</p>
             <input type="text" name="username" class="username" 
                 placeholder="請輸入帳號..." required>
                 <div class="msg_username"></div>
