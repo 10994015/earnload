@@ -17,3 +17,5 @@
     </ul>
     <i class="fas fa-bars" id="menu"></i>
 </header>
+
+<script src="../js/header.js"></script>

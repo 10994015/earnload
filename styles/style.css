@@ -1150,6 +1150,12 @@ footer#footer {
   width: 350px;
 }
 
+@media screen and (max-width: 350px) {
+  #register > form {
+    width: 95%;
+  }
+}
+
 #register > form > p {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -1244,6 +1250,12 @@ footer#footer {
           align-items: center;
   width: 350px;
   color: #CBC080;
+}
+
+@media screen and (max-width: 350px) {
+  #login > form {
+    width: 95%;
+  }
 }
 
 #login > form > p {
@@ -1526,6 +1538,12 @@ footer#footer {
 #news > .newsBox {
   width: 800px;
   height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  #news > .newsBox {
+    width: 95%;
+  }
 }
 
 #news > .newsBox > .newsFirst {
