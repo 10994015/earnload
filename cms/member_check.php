@@ -3,7 +3,7 @@ require_once('../config/conn.php');
 session_start();
 try {
     $sql_str = "SELECT * FROM member
-                WHERE username=:username AND pwd=:pwd AND level >= 1";
+                WHERE username=:username AND pwd=:pwd AND level >= 9";
     $RS = $conn -> prepare($sql_str);
    
     $username = $_POST['username'];  //接收登入的帳號
@@ -14,7 +14,6 @@ try {
    
     $RS -> execute();
     $total = $RS -> rowCount();
-    
     $loginNum = -1;
     //$total是資料集的筆數, 如果>=1表示有查詢到資料，是符合登入的會員
     if( $total >= 1 ){
@@ -34,9 +33,9 @@ try {
       $loginNum = 0;
     }
     if($loginNum == 1){
-      echo "<script> function loginFn(){alert('登入成功!');window.location.href = '../'; } loginFn();</script>";
+      echo "<script> function loginFn(){alert('登入成功!');window.location.href = './'; } loginFn();</script>";
     }else{
-      echo "<script> function loginFn(){alert('登入失敗!');window.location.href = '../web/login.php?msg=1'; }loginFn();</script>";
+      echo "<script> function loginFn(){alert('登入失敗!');window.location.href = './login.php?msg=1'; }loginFn();</script>";
     }
     // header('Location:'.$url);  
   } 

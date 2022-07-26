@@ -43,7 +43,7 @@ if(isset($_GET['mailok']) && $_GET['mailok']==1){
   }
 
   if(isset($_GET['msg']) && $_GET['msg']==1){
-      echo "<script>alert('登入失敗!')</script>";
+    //   echo "<script>alert('登入失敗!')</script>";
   }
 ?>
 

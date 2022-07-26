@@ -36,7 +36,7 @@ if(isset($_SESSION['name'])){
     <link rel="stylesheet" href="../styles/cms.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     
-    <title>Movieearn管理後台</title>
+    <title>賺載管理後臺</title>
     <style>
     .userlist{
         border-bottom:1px #000 solid;
@@ -45,22 +45,14 @@ if(isset($_SESSION['name'])){
 </head>
 <body>
 <?php if($_SESSION['mem_level'] > 2) {?>
-    <h6 id="logo"><p>XXXX管理後臺</p><p></p></h6>
+    <h6 id="logo"><p>賺載管理後臺</p><p></p></h6>
     <div class="content">
        <div class="cms">
-            
-            <div class="usercontent">
-               <div>
-                <h3 id="contentusername">請選擇帳號</h3>
-                    <h3 id="contentname"></h3>
-                    <h3 id="contentphone"></h3>
-                    <h3 id="contentmoney"></h3>
-                    <h3 id="contenturl"></h3>
-                    <h3 id="contentup"></h3>
-                    <div id="qrcode"></div>
-               </div>
-                <div id="update">編輯</div>
-            </div>
+           <div id="toolbar"> <p>賺載管理後臺</p><a href="./logout.php">登出</a></div>
+            <header id="header">
+                <!-- <a href="javascript:;">IP設定</a> -->
+                <a href="javascript:;" class="focus"><i class="fa-solid fa-box-archive"></i>代理管理</a>
+            </header>
             <div class="member">
               
                 <?php foreach($admin_member as $item){?>
@@ -131,6 +123,18 @@ if(isset($_SESSION['name'])){
                     </ul>
 
                 <?php } ?>
+            </div>
+            <div class="usercontent">
+               <div>
+                <h3 id="contentusername">請選擇帳號</h3>
+                    <h3 id="contentname"></h3>
+                    <h3 id="contentphone"></h3>
+                    <h3 id="contentmoney"></h3>
+                    <h3 id="contenturl"></h3>
+                    <h3 id="contentup"></h3>
+                    <div id="qrcode"></div>
+               </div>
+                <div id="update">編輯</div>
             </div>
        </div>
     <?php }else{ ?>
