@@ -44,7 +44,7 @@ if(isset($_SESSION['name'])){
     </style>
 </head>
 <body>
-<?php if($_SESSION['mem_level'] > 2) {?>
+<?php if($_SESSION['mem_level'] >= 9) {?>
     <h6 id="logo"><p>賺載管理後臺</p><p></p></h6>
     <div class="content">
        <div class="cms">
@@ -227,7 +227,7 @@ if(isset($_SESSION['name'])){
 </html>
 <?php
 }else{
-echo "找不到此頁面。";
+header('Location:./login.php');
 ?>
 
 <?php } ?>

@@ -12,7 +12,7 @@ if(isset($_GET['username']) && $_GET['username'] != ""){
         $row_RS = $stmt -> fetch(PDO::FETCH_ASSOC);
     }
 }
-
+if(isset($_SESSION['name'])){
 ?>
 
 <!DOCTYPE html>
@@ -61,6 +61,7 @@ if(isset($_GET['username']) && $_GET['username'] != ""){
     </style>
 </head>
 <body>
+
     <form action="./updateuser.php" method="post">
         <h2>編輯會員</h2>
         <div><span>姓名:</span><input type="text" name="name" value="<?php echo $row_RS['name'];?>" placeholder="姓名"></div>
@@ -70,5 +71,9 @@ if(isset($_GET['username']) && $_GET['username'] != ""){
         <input type="submit" value="編輯">
         <input type="hidden" name="updateuser" value="updateuser">
     </form>
+
 </body>
 </html>
+<?php }else{
+header('Location:./login.php');
+ } ?>
